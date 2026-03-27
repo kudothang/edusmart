@@ -3,7 +3,7 @@ import { ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BlogList from "../components/ui/blog/BlogList";
 import BlogSidebar from "../components/ui/blog/BlogSidebar";
-import { Pagination } from "../components/ui/pagination";
+import { Pagination } from "../components/ui/Pagination";
 import { usePagination } from "../hooks/usePagnition";
 import {blogs} from "../data/blogs"
 
