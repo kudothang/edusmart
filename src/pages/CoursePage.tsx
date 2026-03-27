@@ -3,7 +3,7 @@ import { useCourses } from "../hooks/useCourses";
 import { useCourseFilter } from "../hooks/useCourseFilter";
 
 import { CourseFilterBar } from "../components/ui/Courses/CourseFilterBar";
-import { Pagination } from "../components/ui/Pagnito";
+import { Pagination } from "../components/ui/Pagination";
 import { usePagination } from "../hooks/usePagnition";
 import { useCourseFilterStore } from "../stores/courseFilterStore";
 import { useSearchParams } from "react-router";
