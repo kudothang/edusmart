@@ -7,7 +7,7 @@ import { Pagination } from "../components/ui/pagination";
 import { usePagination } from "../hooks/usePagnition";
 import { useCourseFilterStore } from "../stores/courseFilterStore";
 import { useSearchParams } from "react-router";
-import { useFilterWithPagination } from "@/hooks/useFilterAndPagination";
+import { useFilterWithPagination } from "../hooks/useFilterAndPagination";
 import Grid from "@/components/ui/Grid";
 import CourseCard from "@/components/ui/Courses/CourseCard";
 
