@@ -1,8 +1,8 @@
-import HeroSection from "@/components/ui/home/HeroSection"
-import StatsSection from "@/components/ui/home/StatsSection"
-import FeaturedCourses from "@/components/ui/home/FeaturedCourse"
-import WhyChooseUs from "@/components/ui/home/WhyChooseUs"
-import ReviewSection from "@/components/ui/home/ReviewSection"
+import HeroSection from "../components/ui/home/HeroSection"
+import StatsSection from "../components/ui/home/StatsSection"
+import FeaturedCourses from "../components/ui/home/FeaturedCourse"
+import WhyChooseUs from "../components/ui/home/WhyChooseUs"
+import ReviewSection from "../components/ui/home/ReviewSection"
 
 export default function HomePage() {
   return (

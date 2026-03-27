@@ -2,10 +2,10 @@ import { useState } from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Pagination } from "../components/ui/Pagination";
-import { usePagination } from "@/hooks/usePagnition";
-import Grid from "@/components/ui/Grid";
-import MyCourseCard from "@/components/ui/myCourses/MyCourseCard";
-import { mycoursedata } from "@/data/myCoursedata";
+import { usePagination } from "../hooks/usePagnition";
+import Grid from "../components/ui/Grid";
+import MyCourseCard from "../components/ui/myCourses/MyCourseCard";
+import { mycoursedata } from "../data/myCoursedata";
 
 export default function MyCoursesPage() {
  

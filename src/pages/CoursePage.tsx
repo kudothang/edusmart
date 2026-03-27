@@ -8,8 +8,8 @@ import { usePagination } from "../hooks/usePagnition";
 import { useCourseFilterStore } from "../stores/courseFilterStore";
 import { useSearchParams } from "react-router";
 import { useFilterWithPagination } from "../hooks/useFilterAndPagination";
-import Grid from "@/components/ui/Grid";
-import CourseCard from "@/components/ui/Courses/CourseCard";
+import Grid from "../components/ui/Grid";
+import CourseCard from "../components/ui/Courses/CourseCard";
 
 export default function CourseListPage() {
   const [searchParam, setSearchParam] = useSearchParams();

@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 
-import { updateProfileSchema } from "@/schemas/schemaAuth"
+import { updateProfileSchema } from "../schemas/schemaAuth"
 
 interface ProfileForm {
   fullName: string

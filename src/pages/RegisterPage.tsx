@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { AlertCircle, Check, Loader, Eye, EyeOff } from "lucide-react"
 
-import { registerSchema } from "@/schemas/schemaAuth"
-import { useAuthStore } from "@/stores/authStore"
+import { registerSchema } from "../schemas/schemaAuth"
+import { useAuthStore } from "../stores/authStore"
 
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"

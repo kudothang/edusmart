@@ -5,7 +5,7 @@ import { BookOpen, Users, BarChart3, Globe, Award, Clock } from "lucide-react";
 import type { CurriculumItem } from "../types";
 import { useCourseDetail } from "../hooks/useCourseDetail";
 import { formatPriceVn } from "../utils/Format";
-import { useCartStore } from "@/stores/cartStore";
+import { useCartStore } from "../stores/cartStore";
 
 
 export default function CourseDetail() {

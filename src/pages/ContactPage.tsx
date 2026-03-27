@@ -1,6 +1,6 @@
 
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react"
-import ContactForm from "@/components/ui/contact/ContactForm"
+import ContactForm from "../components/ui/contact/ContactForm"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
