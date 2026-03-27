@@ -1,26 +1,32 @@
 
+import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router'
 import './App.css'
 import MainLayout from './components/layouts/MainLayout'
 import AuthLayout from './components/ui/auth/authLayout'
-import CourseDetail from './pages/CourseDetail'
-import CourseListPage from './pages/CoursePage'
-import MyCoursesPage from './pages/MyCoursesPage'
-import CartPage from './pages/CartPage'
-import BlogPage from './pages/BlogPage'
-import CheckOutPage from './pages/CheckOutPage'
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
 import ProtectedRoute from './components/ProtectedRoute'
-import HomePage from './pages/HomePage'
-import ContactPage from './pages/ContactPage'
-import ProfilePage from './pages/Profile'
+
+const HomePage = lazy(() => import('./pages/HomePage'))
+const CourseListPage = lazy(() => import('./pages/CoursePage'))
+const CourseDetail = lazy(() => import('./pages/CourseDetail'))
+const MyCoursesPage = lazy(() => import('./pages/MyCoursesPage'))
+const CartPage = lazy(() => import('./pages/CartPage'))
+const BlogPage = lazy(() => import('./pages/BlogPage'))
+const CheckOutPage = lazy(() => import('./pages/CheckOutPage'))
+const LoginPage = lazy(() => import('./pages/LoginPage'))
+const RegisterPage = lazy(() => import('./pages/RegisterPage'))
+const ContactPage = lazy(() => import('./pages/ContactPage'))
+const ProfilePage = lazy(() => import('./pages/Profile'))
+
+const routeLoadingFallback = (
+  <div className="flex min-h-[40vh] items-center justify-center px-4 text-sm font-medium text-emerald-700">
+    Dang tai noi dung...
+  </div>
+)
 
 function App() {
-
   return (
-    <>
-
+    <Suspense fallback={routeLoadingFallback}>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
@@ -39,38 +45,37 @@ function App() {
             element={
               <ProtectedRoute>
                 <CartPage />
-              </ProtectedRoute>} />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/checkout"
             element={
               <ProtectedRoute>
                 <CheckOutPage />
-              </ProtectedRoute>}
+              </ProtectedRoute>
+            }
           />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route
-            path="/blogs"
-            element={<BlogPage />} />
-          <Route
-            path="/contact"
-            element={<ContactPage />} />
-             <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <ProfilePage />
-            </ProtectedRoute>} />
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            }
+          />
         </Route>
-      
-            <Route element={<AuthLayout />}>
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/register" element={<RegisterPage />} />
-            </Route>
-  
-       
+
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Route>
+
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-
-    </>
+    </Suspense>
   )
 }
 
